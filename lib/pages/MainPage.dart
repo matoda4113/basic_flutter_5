@@ -21,6 +21,8 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    print(userController.userPoint);
+
   }
 
   int point = 0;

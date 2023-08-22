@@ -1,4 +1,6 @@
+import 'package:basic_flutter_5/controller/UserController.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 ///Mypage
 ///담당자 : ---
@@ -23,7 +25,16 @@ class _MyPageState extends State<MyPage> {
     return Scaffold(
       appBar: AppBar(title: const Text("Mypage")),
       body: Container(
-        child: Text("Mypage"),
+        child: Column(
+          children: [
+            Text("내점수는?"),
+            GetBuilder<UserController>(
+              builder: (controller) {
+                return Text(controller.userPoint.toString());
+              }
+            )
+          ],
+        ),
       ),
     );
   }
